@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie-edge">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<title>Blogen Admin Area</title>
+</head>
+<body>
+	<!-- bg-inverse makes the background dark and navbar-inverse majes the text light-->
+<nav class="navbar navbar-toggleable-sm navbar-inverse bg-inverse p-0">
+	<div class="container">
+		<button class="navbar-toggler navbar-toggler-right" data-toggle="collapse" data-target="#navbarNav">
+		<span class="navbar-toggler-icon"></span>
+		</button>
+		<a href="index.html" class="navbar-brand mr-3">Blogen</a>
+		<div class="collapse navbar-collapse" id="navbarNav">
+			<ul class="navbar-nav">
+					<!-- px-2 padding on the left and right-->
+				<li class="navbar-item px-2">
+					<a href="index.html" class="nav-link ">Dashboard</a>
+				</li>
+				<li class="navbar-item px-2">
+					<a href="posts.html" class="nav-link ">Post</a>
+				</li>
+				<li class="navbar-item px-2">
+					<a href="categories.html" class="nav-link ">Categories</a>
+				</li>
+				<li class="navbar-item px-2">
+					<a href="users.html" class="nav-link ">Users</a>
+				</li>
+			</ul>
+								<!-- ml-auto margin left auto-->
+			<ul class="navbar-nav ml-auto">
+			<li class="navbar-item dropdown mr-3">
+				<a href="#" class="nav-link dropdown-toggle " data-toggle="dropdown">
+					<i class="fa fa-user"> Welcome Lyoid</i>
+				</a>
+				<div class="dropdown-menu">
+					<a href="profile.html" class="dropdown-item"><i class="fa fa-user-circle"></i> Profile</a>
+					<a href="settings.html" class="dropdown-item"><i class="fa fa-gear"></i> Settings</a>
+				</div>
+			</li>
+			<li class="nav-item">
+				<a href="login.html" class="nav-link"><i class="fa fa-user-times"></i> Logout</a>
+			</li>
+			</ul>
+		</div>
+	</div>
+</nav>
+	
+	<!-- Header Section -->
+<header id="main-header" class="py-2 bg-primary text-white">
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<h1><i class="fa fa-pencil"></i> Top 5 Web Development Courses</h1>
+			</div>
+		</div>
+	</div>
+</header>
+
+<!-- Actions Section -->
+  <section id="actions" class="py-4 mb-4 bg-faded">
+    <div class="container">
+      <div class="row">
+         <div class="col-md-3 mr-auto">
+         	<a href="index.html" class="btn btn-secondary btn-block"><i class="fa fa-arrow-left"></i> Back to Dashboard</a>
+         </div>
+         <div class="col-md-3">
+         	<a href="" class="btn btn-success btn-block"><i class="fa fa-check"></i> Save Changes</a>
+         </div>
+         <div class="col-md-3">
+         	<a href="" class="btn btn-danger btn-block"><i class="fa fa-remove"></i> Delete Post</a>
+         </div>
+      </div>
+    </div>
+  </section>
+
+
+<!-- POST Edit -->
+
+<section id="editPost">
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<div class="card-header">
+					<h4>Edit Post</h4>
+				</div>
+				<div class="card-block">
+					<form>
+				<div class="form-group">
+					<label for="title" class="form-control-label">Title</label>
+					<input type="text" class="form-control" value="Top 5 Web Development Courses">
+				</div>
+				<div class="form-group">
+					<label for="Category" class="form-control-label">Category</label>
+					<select type="text" class="form-control">
+						<option value="" selected="">Web Development</option>
+						<option value="" >Tech Gadgets</option>
+						<option value="">Business</option>
+						<option value="">Health & Fitness</option>
+					</select>
+				</div>
+				<div class="form-group bg-faded p-3">
+					<label for="file">Image Upload</label>
+					<input type="file" class="form-control-file" id="file">
+					<small id="fileHelp" class="form-text text-muted">
+						Max Size 3MB
+					</small>
+				</div>
+				<div class="form-group">
+					<label for="body">Body</label>
+					<textarea name='addPostEditor' class="form-control">
+					There are a plethora of resources on the internet for learning Web Development. I would know, I’ve been learning for almost three years. Last month, I published a list of 100+ completely free links for learning Full Stack Web Development. The post went viral, and through user contributions has now grown to nearly 200 resources! You can check out that post here, and the associated GitHub Repo here.
+					</textarea>
+				</div>
+			</form>
+				</div>
+
+			</div>
+			
+		</div>
+	</div>
+</section>
+
+
+<footer id="main-footer" class="bg-inverse text-white mt-5 p-5">
+<div class="container">
+	<div class="row">
+		<div class="col">
+			<p class="lead text-center">Copyright &copy; 2017 || Lyoid Lopes || Centennial College || Software Engineering Technology || Admin UI Project - Bootstrap 4 & SCSS</p>
+		</div>
+	</div>
+</div>
+</footer>
+
+
+
+	
+	<script src="js/jquery.min.js"></script>
+	<script src="js/tether.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="https://cdn.ckeditor.com/4.8.0/standard/ckeditor.js"></script>
+	<script>
+		CKEDITOR.replace('addPostEditor');
+	</script>
+	
+</body>
+</html>
